@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "675467833617",
+    "project_id": "twnsqr-townsquare",
+    "storage_bucket": "twnsqr-townsquare.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675467833617:android:819e3596e4df9ce54d9cb0",
+        "android_client_info": {
+          "package_name": "com.example.townsquare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQxuc8PiGdc0_aavWPEWscIYGxJU7Lqw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

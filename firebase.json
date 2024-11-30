@@ -1,0 +1,33 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "twnsqr-townsquare",
+          "appId": "1:675467833617:android:819e3596e4df9ce54d9cb0",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "twnsqr-townsquare",
+          "configurations": {
+            "android": "1:675467833617:android:819e3596e4df9ce54d9cb0",
+            "ios": "1:675467833617:ios:2eec6423be84f4554d9cb0",
+            "macos": "1:675467833617:ios:2eec6423be84f4554d9cb0",
+            "web": "1:675467833617:web:00446f70740eeb884d9cb0",
+            "windows": "1:675467833617:web:0f1c9078085320b84d9cb0"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
