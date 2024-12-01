@@ -1,11 +1,13 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import '../../models/event.dart';
 import '../../widgets/card/event_card.dart';
 import '../date_format.dart';
 
 class FadeInEventCard extends StatefulWidget {
   final int index;
-  final Map<String, dynamic> event;
+  final Event event;
 
   const FadeInEventCard({
     Key? key,
@@ -48,16 +50,15 @@ class FadeInEventCardState extends State<FadeInEventCard>
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: buildEventCard(
-          time: formatEventTime(widget.event['eventTime']),
-          eventName: widget.event['eventTitle'] ?? 'Unknown Event',
-          price: '${widget.event['price']}€',
-          location: widget.event['eventLocation'] ?? 'Unknown Location',
-          spotsLeft: '${widget.event['availableSpots']}',
-          intensity: (widget.event['tag'] is List<dynamic>)
-              ? List<String>.from(widget.event['tag'])
-              : ['N/A'],
-          buttonText: widget.event['availableSpots'] > 0 ? 'Join' : 'Sold out',
-          isSoldOut: widget.event['availableSpots'] == 0,
+          time: formatEventTime(Timestamp.fromDate(widget.event.time)),
+          eventName: widget.event.title,
+          price: '${widget.event.price.toStringAsFixed(2)}€',
+          location: widget.event.location,
+          spotsLeft: '${widget.event.availableSpots}',
+          intensity: widget.event.tags.isNotEmpty ? widget.event.tags : ['N/A'],
+          buttonText:
+              widget.event.availableSpots > 0 ? 'Join' : 'Sold out',
+          isSoldOut: widget.event.availableSpots == 0,
         ),
       ),
     );
@@ -69,3 +70,4 @@ class FadeInEventCardState extends State<FadeInEventCard>
     super.dispose();
   }
 }
+
