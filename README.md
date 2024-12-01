@@ -45,6 +45,7 @@ If you prefer to run the project locally, follow these steps:
 3. The project includes **animations** for loading and displaying lists to ensure a smooth user experience.
 4. The app is currently designed for **web browsers** only, with future plans to support **Android** and **iOS** platforms.
 5. **Styling** for text, colors, and box decorations has been organized and optimized for consistency and a clean UI design throughout the app.
+6. Since this is a sample project, the App ID and API key are not hidden to simplify running the application. In production, all sensitive keys must be stored in an .env file and excluded from GitHub for security purposes.
 
 
 ## Improvements
